@@ -14,6 +14,9 @@ use Zend\Permissions\Acl\Exception\ExceptionInterface as AclExceptionInterface;
 
 class ZendAclFactory
 {
+    /**
+     * @throws Exception\InvalidConfigException
+     */
     public function __invoke(ContainerInterface $container): AuthorizationInterface
     {
         $config = $container->get('config')['authorization'] ?? null;
@@ -43,6 +46,9 @@ class ZendAclFactory
         return new ZendAcl($acl);
     }
 
+    /**
+     * @throws Exception\InvalidConfigException
+     */
     private function injectRoles(Acl $acl, array $roles) : void
     {
         foreach ($roles as $role => $parents) {
@@ -63,6 +69,9 @@ class ZendAclFactory
         }
     }
 
+    /**
+     * @throws Exception\InvalidConfigException
+     */
     private function injectResources(Acl $acl, array $resources) : void
     {
         foreach ($resources as $resource) {
@@ -74,6 +83,9 @@ class ZendAclFactory
         }
     }
 
+    /**
+     * @throws Exception\InvalidConfigException
+     */
     private function injectPermissions(Acl $acl, array $permissions, string $type) : void
     {
         if (! in_array($type, ['allow', 'deny'], true)) {
