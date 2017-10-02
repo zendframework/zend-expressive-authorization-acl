@@ -14,7 +14,7 @@ use Zend\Permissions\Acl\Exception\ExceptionInterface as AclExceptionInterface;
 
 class ZendAclFactory
 {
-    public function __invoke(ContainerInterface $container): AuthorizationInterface
+    public function __invoke(ContainerInterface $container) : AuthorizationInterface
     {
         $config = $container->get('config')['authorization'] ?? null;
         if (null === $config) {
