@@ -12,17 +12,6 @@
         "zendframework",
         "zend-expressive"
     ],
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        },
-        "zf": {
-            "config-provider": "Zend\\Expressive\\Authorization\\Acl\\ConfigProvider"
-        }
-    },
     "support": {
         "docs": "https://docs.zendframework.com/zend-expressive-authorization-acl/",
         "issues": "https://github.com/zendframework/zend-expressive-authorization-acl/issues",
@@ -54,6 +43,17 @@
     "autoload-dev": {
         "psr-4": {
             "ZendTest\\Expressive\\Authorization\\Acl\\": "test/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "zf": {
+            "config-provider": "Zend\\Expressive\\Authorization\\Acl\\ConfigProvider"
         }
     },
     "scripts": {
