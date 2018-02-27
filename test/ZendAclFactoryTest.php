@@ -1,20 +1,26 @@
 <?php
 /**
  * @see       https://github.com/zendframework/zend-expressive-authorization-acl for the canonical source repository
- * @copyright Copyright (c) 2017 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright Copyright (c) 2017-2018 Zend Technologies USA Inc. (https://www.zend.com)
  * @license   https://github.com/zendframework/zend-expressive-authorization-acl/blob/master/LICENSE.md New BSD License
  */
+
+declare(strict_types=1);
 
 namespace ZendTest\Expressive\Authorization\Acl;
 
 use PHPUnit\Framework\TestCase;
+use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
-use Zend\Expressive\Authorization\Acl\Exception;
 use Zend\Expressive\Authorization\Acl\ZendAcl;
 use Zend\Expressive\Authorization\Acl\ZendAclFactory;
+use Zend\Expressive\Authorization\Exception;
 
 class ZendAclFactoryTest extends TestCase
 {
+    /** @var ContainerInterface|ObjectProphecy */
+    private $container;
+
     protected function setUp()
     {
         $this->container = $this->prophesize(ContainerInterface::class);
@@ -44,8 +50,8 @@ class ZendAclFactoryTest extends TestCase
     {
         $this->container->get('config')->willReturn([
             'authorization' => [
-                'roles' => []
-            ]
+                'roles' => [],
+            ],
         ]);
 
         $factory = new ZendAclFactory();
@@ -59,8 +65,8 @@ class ZendAclFactoryTest extends TestCase
         $this->container->get('config')->willReturn([
             'authorization' => [
                 'roles' => [],
-                'resources' => []
-            ]
+                'resources' => [],
+            ],
         ]);
 
         $factory = new ZendAclFactory();
@@ -82,8 +88,8 @@ class ZendAclFactoryTest extends TestCase
                     'admin.posts',
                     'admin.publish',
                     'admin.settings',
-                ]
-            ]
+                ],
+            ],
         ];
         $this->container->get('config')->willReturn($config);
 
@@ -99,14 +105,14 @@ class ZendAclFactoryTest extends TestCase
                 'roles' => [
                     1 => [],
                 ],
-                'permissions' => []
-            ]
+                'permissions' => [],
+            ],
         ]);
 
         $factory = new ZendAclFactory();
 
         $this->expectException(Exception\InvalidConfigException::class);
-        $zendAcl = $factory($this->container->reveal());
+        $factory($this->container->reveal());
     }
 
     public function testFactoryWithUnknownRole()
@@ -121,14 +127,14 @@ class ZendAclFactoryTest extends TestCase
                     'admin.posts',
                 ],
                 'allow' => [
-                    'editor' => ['admin.dashboard']
-                ]
-            ]
+                    'editor' => ['admin.dashboard'],
+                ],
+            ],
         ]);
 
         $factory = new ZendAclFactory();
 
         $this->expectException(Exception\InvalidConfigException::class);
-        $zendAcl = $factory($this->container->reveal());
+        $factory($this->container->reveal());
     }
 }
