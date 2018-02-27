@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 0.2.1 - 2018-02-27
+
+### Added
+
+- [#13](https://github.com/zendframework/zend-expressive-authorization-acl/pull/13)
+  adds support for alpha releases of zend-expressive-authorization,
+  zend-expressive-router, and any of their dependencies.
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing.
+
 ## 0.2.0 - 2018-02-27
 
 ### Added
