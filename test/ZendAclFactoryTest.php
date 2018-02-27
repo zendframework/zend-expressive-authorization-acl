@@ -106,7 +106,7 @@ class ZendAclFactoryTest extends TestCase
         $factory = new ZendAclFactory();
 
         $this->expectException(Exception\InvalidConfigException::class);
-        $zendAcl = $factory($this->container->reveal());
+        $factory($this->container->reveal());
     }
 
     public function testFactoryWithUnknownRole()
@@ -129,6 +129,6 @@ class ZendAclFactoryTest extends TestCase
         $factory = new ZendAclFactory();
 
         $this->expectException(Exception\InvalidConfigException::class);
-        $zendAcl = $factory($this->container->reveal());
+        $factory($this->container->reveal());
     }
 }
