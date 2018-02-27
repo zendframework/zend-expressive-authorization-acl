@@ -5,6 +5,8 @@
  * @license   https://github.com/zendframework/zend-expressive-authorization-acl/blob/master/LICENSE.md New BSD License
  */
 
+declare(strict_types=1);
+
 namespace ZendTest\Expressive\Authorization\Acl;
 
 use PHPUnit\Framework\TestCase;

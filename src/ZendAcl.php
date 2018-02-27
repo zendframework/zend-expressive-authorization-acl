@@ -5,6 +5,8 @@
  * @license   https://github.com/zendframework/zend-expressive-authorization-acl/blob/master/LICENSE.md New BSD License
  */
 
+declare(strict_types=1);
+
 namespace Zend\Expressive\Authorization\Acl;
 
 use Psr\Http\Message\ServerRequestInterface;
