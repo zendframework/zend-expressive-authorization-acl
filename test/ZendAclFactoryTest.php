@@ -44,8 +44,8 @@ class ZendAclFactoryTest extends TestCase
     {
         $this->container->get('config')->willReturn([
             'authorization' => [
-                'roles' => []
-            ]
+                'roles' => [],
+            ],
         ]);
 
         $factory = new ZendAclFactory();
@@ -59,8 +59,8 @@ class ZendAclFactoryTest extends TestCase
         $this->container->get('config')->willReturn([
             'authorization' => [
                 'roles' => [],
-                'resources' => []
-            ]
+                'resources' => [],
+            ],
         ]);
 
         $factory = new ZendAclFactory();
@@ -82,8 +82,8 @@ class ZendAclFactoryTest extends TestCase
                     'admin.posts',
                     'admin.publish',
                     'admin.settings',
-                ]
-            ]
+                ],
+            ],
         ];
         $this->container->get('config')->willReturn($config);
 
@@ -99,8 +99,8 @@ class ZendAclFactoryTest extends TestCase
                 'roles' => [
                     1 => [],
                 ],
-                'permissions' => []
-            ]
+                'permissions' => [],
+            ],
         ]);
 
         $factory = new ZendAclFactory();
@@ -121,9 +121,9 @@ class ZendAclFactoryTest extends TestCase
                     'admin.posts',
                 ],
                 'allow' => [
-                    'editor' => ['admin.dashboard']
-                ]
-            ]
+                    'editor' => ['admin.dashboard'],
+                ],
+            ],
         ]);
 
         $factory = new ZendAclFactory();
