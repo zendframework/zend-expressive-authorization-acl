@@ -9,9 +9,9 @@ namespace ZendTest\Expressive\Authorization\Acl;
 
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
-use Zend\Expressive\Authorization\Acl\Exception;
 use Zend\Expressive\Authorization\Acl\ZendAcl;
 use Zend\Expressive\Authorization\Acl\ZendAclFactory;
+use Zend\Expressive\Authorization\Exception;
 
 class ZendAclFactoryTest extends TestCase
 {

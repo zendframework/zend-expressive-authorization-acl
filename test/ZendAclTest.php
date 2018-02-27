@@ -9,8 +9,8 @@ namespace ZendTest\Expressive\Authorization\Acl;
 
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
-use Zend\Expressive\Authorization\Acl\Exception;
 use Zend\Expressive\Authorization\Acl\ZendAcl;
+use Zend\Expressive\Authorization\Exception;
 use Zend\Expressive\Router\RouteResult;
 use Zend\Permissions\Acl\Acl;
 
