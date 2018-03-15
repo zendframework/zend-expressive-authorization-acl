@@ -14,6 +14,11 @@ use Zend\Expressive\Authorization\Acl\ConfigProvider;
 use Zend\Expressive\Authorization\Acl\ZendAcl;
 use Zend\ServiceManager\ServiceManager;
 
+use function array_merge_recursive;
+use function file_get_contents;
+use function json_decode;
+use function sprintf;
+
 class ConfigProviderTest extends TestCase
 {
     /** @var ConfigProvider */

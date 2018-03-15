@@ -15,6 +15,8 @@ use Zend\Expressive\Authorization\Exception;
 use Zend\Expressive\Router\RouteResult;
 use Zend\Permissions\Acl\Acl;
 
+use function sprintf;
+
 class ZendAcl implements AuthorizationInterface
 {
     /**
