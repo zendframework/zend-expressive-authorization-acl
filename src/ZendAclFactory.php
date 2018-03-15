@@ -15,6 +15,9 @@ use Zend\Expressive\Authorization\Exception;
 use Zend\Permissions\Acl\Acl;
 use Zend\Permissions\Acl\Exception\ExceptionInterface as AclExceptionInterface;
 
+use function in_array;
+use function sprintf;
+
 class ZendAclFactory
 {
     /**
