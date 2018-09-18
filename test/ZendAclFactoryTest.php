@@ -38,7 +38,7 @@ class ZendAclFactoryTest extends TestCase
 
     public function testFactoryWithoutZendAclConfig()
     {
-        $this->container->get('config')->willReturn(['authorization' => []]);
+        $this->container->get('config')->willReturn(['zend-expressive-authorization-acl' => []]);
 
         $factory = new ZendAclFactory();
 
@@ -49,7 +49,7 @@ class ZendAclFactoryTest extends TestCase
     public function testFactoryWithoutResources()
     {
         $this->container->get('config')->willReturn([
-            'authorization' => [
+            'zend-expressive-authorization-acl' => [
                 'roles' => [],
             ],
         ]);
@@ -63,7 +63,7 @@ class ZendAclFactoryTest extends TestCase
     public function testFactoryWithEmptyRolesResources()
     {
         $this->container->get('config')->willReturn([
-            'authorization' => [
+            'zend-expressive-authorization-acl' => [
                 'roles' => [],
                 'resources' => [],
             ],
@@ -77,7 +77,7 @@ class ZendAclFactoryTest extends TestCase
     public function testFactoryWithoutAllowOrDeny()
     {
         $config = [
-            'authorization' => [
+            'zend-expressive-authorization-acl' => [
                 'roles' => [
                     'admini'      => [],
                     'editor'      => ['administrator'],
@@ -101,7 +101,7 @@ class ZendAclFactoryTest extends TestCase
     public function testFactoryWithInvalidRole()
     {
         $this->container->get('config')->willReturn([
-            'authorization' => [
+            'zend-expressive-authorization-acl' => [
                 'roles' => [
                     1 => [],
                 ],
@@ -118,7 +118,7 @@ class ZendAclFactoryTest extends TestCase
     public function testFactoryWithUnknownRole()
     {
         $this->container->get('config')->willReturn([
-            'authorization' => [
+            'zend-expressive-authorization-acl' => [
                 'roles' => [
                     'administrator' => [],
                 ],

@@ -25,20 +25,20 @@ class ZendAclFactory
      */
     public function __invoke(ContainerInterface $container) : AuthorizationInterface
     {
-        $config = $container->get('config')['authorization'] ?? null;
+        $config = $container->get('config')['zend-expressive-authorization-acl'] ?? null;
         if (null === $config) {
             throw new Exception\InvalidConfigException(
-                'No authorization config provided'
+                'No zend-expressive-authorization-acl config provided'
             );
         }
         if (! isset($config['roles'])) {
             throw new Exception\InvalidConfigException(
-                'No authorization roles configured for ZendAcl'
+                'No zend-expressive-authorization-acl roles configured for ZendAcl'
             );
         }
         if (! isset($config['resources'])) {
             throw new Exception\InvalidConfigException(
-                'No authorization resources configured for ZendAcl'
+                'No zend-expressive-authorization-acl resources configured for ZendAcl'
             );
         }
 

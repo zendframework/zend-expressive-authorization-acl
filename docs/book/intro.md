@@ -1,3 +1,0 @@
-# zend-expressive-authorization-acl
-
-This component provides ...
