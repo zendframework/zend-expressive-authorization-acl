@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 1.0.0 - TBD
+
+### Added
+
+- [#16](https://github.com/zendframework/zend-expressive-authorization-acl/pull/16) adds documentation; visit it at https://docs.zendframework.com/zend-expressive-authorization-acl
+
+### Changed
+
+- [#16](https://github.com/zendframework/zend-expressive-authorization-acl/pull/16) changes the top-level configuration key expected from `authorization` to
+  `zend-expressive-authorization-acl`. If you were on a pre-release version, you will need to alter your configuration.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing.
+
 ## 0.3.0 - 2018-03-15
 
 ### Added
