@@ -66,7 +66,7 @@ class ConfigProviderTest extends TestCase
         }
 
         $config['dependencies']['services']['config'] = [
-            'authorization' => ['roles' => [], 'resources' => []],
+            'zend-expressive-authorization-acl' => ['roles' => [], 'resources' => []],
         ];
         $container = $this->getContainer($config['dependencies']);
 
