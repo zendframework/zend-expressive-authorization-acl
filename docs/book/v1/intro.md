@@ -1,4 +1,4 @@
-# ACL Authorizations for Expressive
+# Introduction
 
 This component provides [Access Control List](https://en.wikipedia.org/wiki/Access_control_list)
 (ACL) authorization abstraction for the [zend-expressive-authorization](https://github.com/zendframework/zend-expressive-authorization)

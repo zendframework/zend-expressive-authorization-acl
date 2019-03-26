@@ -1,9 +1,8 @@
 docs_dir: docs/book
 site_dir: docs/html
 pages:
-    - index.md
+    - Home: index.md
     - Introduction: v1/intro.md
 site_name: zend-expressive-authorization-acl
-site_description: 'ACL authorization middleware for Expressive and PSR-7 applications'
+site_description: 'ACL permission adapter for zend-expressive-authorization.'
 repo_url: 'https://github.com/zendframework/zend-expressive-authorization-acl'
-copyright: 'Copyright (c) 2018 <a href="http://www.zend.com/">Zend Technologies USA Inc.</a>'
