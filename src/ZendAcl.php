@@ -47,4 +47,15 @@ class ZendAcl implements AuthorizationInterface
 
         return $this->acl->isAllowed($role, $routeName);
     }
+
+    /**
+     * @param $role
+     * @param $resource
+     * @param null $privilege
+     * @return bool
+     */
+    public function isAllowed($role, $resource, $privilege = null)
+    {
+        return $this->acl->isAllowed($role, $resource, $privilege);
+    }
 }
