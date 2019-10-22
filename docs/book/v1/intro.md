@@ -31,9 +31,9 @@ return [
     // ...
     'zend-expressive-authorization-acl' => [
         'roles' => [
-            'administrator' => [],
-            'editor'        => ['administrator'],
+            'editor'        => [],
             'contributor'   => ['editor'],
+            'administrator' => ['contributor'],
         ],
         'resources' => [
             'admin.dashboard',
@@ -59,11 +59,10 @@ return [
 > so that you can compare and contrast the two systems.
 
 The above configuration defines three roles for a blog web site:
-*administrator*, *editor*, and *contributor*. The *administrator* has the
-highest level of authorization (no parent).  A *contributor* has the permission
-to create a post and manage the dashboard; its parent role is the
-*administrator*.  Finally, an *editor* can only create or update a post; its
-parent role is the *editor*.
+an *editor*, a *contributor*, and an *administrator*. The *contributor* role has
+the *editor* role as a child role, meaning it inherits its capabilities. The
+*administrator* role has the *contributor* role as a child, inheriting both its
+direct capabilities, as well as any that role has inherited.
 
 > In ACL systems, parent roles inherit the permissions of their children.
 
