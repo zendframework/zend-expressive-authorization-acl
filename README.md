@@ -2,7 +2,7 @@
 
 > ## Repository abandoned 2019-12-31
 >
-> This repository has moved to mezzio/mezzio-authorization-acl.
+> This repository has moved to [mezzio/mezzio-authorization-acl](https://github.com/mezzio/mezzio-authorization-acl).
 
 [![Build Status](https://secure.travis-ci.org/zendframework/zend-expressive-authorization-acl.svg?branch=master)](https://secure.travis-ci.org/zendframework/zend-expressive-authorization-acl)
 [![Coverage Status](https://coveralls.io/repos/github/zendframework/zend-expressive-authorization-acl/badge.svg?branch=master)](https://coveralls.io/github/zendframework/zend-expressive-authorization-acl?branch=master)
